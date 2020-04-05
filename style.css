@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input {
+    width: calc(100% - 8px);
+    font-family: 'Chewy';
+    font-size: 1rem;
+    border: 4px solid pink;
+    resize: none;
+    color: gray;
+    background-color: lightblue;
+}
+
+.keyboard {
+    width: 100%;
+    border: 2px solid pink;
+}
+
+.keyboard-line {
+    max-height: 45px;
+    height: 100%;
+    display: flex;
+}
+
+.key {
+    flex-grow: 1;
+    font-family: 'Chewy';
+    font-size: 1.5rem;
+    text-align: center;
+    color: gray;
+    border: 2px solid pink;
+}
+
+.key:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: pink;
+}
+
+.pressed {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: pink;
+}
+
+.backspace,
+.left-shift {
+    flex-grow: 3;
+}
+
+.capslock,
+.enter, 
+.right-shift {
+    flex-grow: 2;
+}
+
+.space {
+    flex-grow: 7;
+}
+
+.keyboard-description {
+    font-family: 'Rock Salt';
+    text-align: center;
+    color: gray;
+}
+
+.OS-word {
+    text-decoration: underline;
+}
