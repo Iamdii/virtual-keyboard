@@ -264,7 +264,11 @@ window.onload = function () {
   function performDownEvent(event, code) {
     event.preventDefault();
 
-    if (code === '' || code === 'ControlLeft' || code === 'ControlRight' || code === 'AltLeft' || code === 'AltRight' || code === 'MetaLeft') return;
+    if (code === '') return;
+
+    document.querySelector(`#${code}`).classList.add('pressed');
+
+    if (code === 'ControlLeft' || code === 'ControlRight' || code === 'AltLeft' || code === 'AltRight' || code === 'MetaLeft') return;
 
     if (code === 'CapsLock') {
       pressCapsLock();
@@ -285,6 +289,10 @@ window.onload = function () {
   }
 
   function performUpEvent(event, code) {
+    if (code === '') return;
+
+    document.querySelector(`#${code}`).classList.remove('pressed');
+
     if (code === 'AltLeft' || code === 'AltRight') {
       event.preventDefault();
     }
@@ -297,7 +305,6 @@ window.onload = function () {
       pressShift();
     }
   }
-
 
   document.addEventListener('keydown', (event) => {
     performDownEvent(event, event.code);
