@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = () => {
   const body = document.querySelector('body');
   const wrapper = '<div class="wrapper"></div>';
   const textareaElement = '<textarea class="input" rows="15" cols="65" autofocus></textarea>';
