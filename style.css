@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.wrapper {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.input {
+    width: calc(100% - 1px);
+    font-family: 'Press Start 2P';
+    font-size: 1rem;
+    border: 4px solid pink;
+    resize: none;
+    outline: none;
+    color: gray;
+    background-color: lightblue;
+}
+
+.keyboard {
+    width: 100%;
+    padding: 1px;
+    border: 4px solid pink;
+}
+
+.keyboard-line {
+    max-height: 45px;
+    height: 100%;
+    display: flex;
+}
+
+.key {
+    margin: 3px;
+    padding: 8px 2px;
+    flex-grow: 1;
+    font-family: 'Press Start 2P';
+    font-size: 1rem;
+    text-align: center;
+    color: gray;
+    border: 3px solid pink;
+    transition: border-radius 0.4s, background-color 0.2s;
+}
+
+.key:hover {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: pink;
+}
+
+.pressed {
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: pink;
+    border-radius: 80%;
+}
+
+.backspace,
+.left-shift {
+    flex-grow: 3;
+}
+
+.capslock,
+.enter, 
+.right-shift {
+    flex-grow: 3;
+}
+
+.space {
+    flex-grow: 7;
+}
+
+.keyboard-description {
+    font-family: 'Press Start 2P';
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1rem;
+    color: gray;
+}
+
+.OS-word {
+    text-decoration: underline;
+}
